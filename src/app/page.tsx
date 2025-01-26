@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="h-screen bg-cover bg-center bg-[url(/assets/home/background-home-desktop.jpg)]">
       <Navbar />
-      <div className="flex space-x-8 text-white mt-60 ml-40 mr-40 align-center font-serif">
+      <div className="flex text-white m-0 ml-40 mr-40 items-center font-serif h-full">
         <div className="flex flex-col space-y-2">
           <h6 className="text-xl">SO, YOU WANT TO TRAVEL TO</h6>
           <h1 className="text-9xl mb-4">SPACE</h1>

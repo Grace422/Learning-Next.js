@@ -2,18 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 const Navbar = () => {
   return (
-      <div className="flex justify-between align-center m-6" >
+      <div className="absolute w-full top-10 flex justify-between items-center" >
         <div>
           <Image
             src="/assets/shared/logo.svg"
             alt="logo"
-            width={30}
-            height={30}
+            width={40}
+            height={40}
+            className="ml-20"
           />
         </div>
-        <hr className="bg-white"/>
-        <div className="border-2 blur-sm bg-transparent p-4">
-          <ul className="flex align-center justify-between space-x-4 text-white">
+        <hr className="text-white"/>
+        <div className="backdrop-blur-3xl bg-transparent p-7 relative w-1/2">
+          <ul className="flex items-center justify-start space-x-4 text-white">
             <Link href="/">
               <li className="text-white">00 Home </li>
             </Link>
