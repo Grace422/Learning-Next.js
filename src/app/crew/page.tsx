@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Crew = () => {
   return (
-    <div className="h-screen bg-cover bg-center bg-[url(/assets/crew/background-crew-desktop.jpg)]">
+    <div className="h-screen bg-cover bg-center bg-fixed bg-[url(/assets/crew/background-crew-desktop.jpg)]">
       <Navbar />
       <div className="h-full pt-40">
         <h1 className="text-white text-xl relative top-0 left-40 tracking-wide">
