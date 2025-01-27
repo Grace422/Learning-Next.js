@@ -7,12 +7,15 @@ import data from "../data/data.json";
 const About = () => {
   const [activeTab, setActiveTab] = useState("Moon");
 
-  const handleTabClick = (tab) => {
+  const handleTabClick = (tab: string) => {
     setActiveTab(tab);
   };
 
   const activeData = data.destinations.find(dest => dest.name.toLowerCase() === activeTab.toLowerCase());
 
+  if (!activeData) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="h-screen bg-cover bg-center bg-fixed bg-[url(/assets/destination/background-destination-desktop.jpg)]">
       <Navbar />
