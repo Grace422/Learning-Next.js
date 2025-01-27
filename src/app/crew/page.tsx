@@ -11,7 +11,7 @@ const Crew = () => {
     setActiveTab(tab);
   };
 
-  const activeData = data.crew.find(dest => dest.name.toLowerCase() === activeTab.toLowerCase());
+  const activeData = data.crew.find(crew => crew.name.toLowerCase() === activeTab.toLowerCase());
 
   if (!activeData) {
     return <div>Loading...</div>;
