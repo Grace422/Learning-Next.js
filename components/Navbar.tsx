@@ -10,9 +10,9 @@ const Navbar = () => {
           <Image
             src="/assets/shared/logo.svg"
             alt="logo"
-            width={40}
-            height={40}
-            className="ml-20"
+            width={50}
+            height={50}
+            className="ml-5 sm:ml-20"
           />
         </div>
         <div className="border-b border-slate-800 flex-grow ml-40 z-10 relative left-5 top-0"></div>
