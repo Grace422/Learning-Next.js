@@ -1,21 +1,18 @@
-"use client"
+"use client";
 import Navbar from "../../../components/Navbar";
 import Image from "next/image";
 import data from "../data/data.json";
 import { useState } from "react";
 
+interface CrewMember {
+  name: string;
+  bio: string;
+  role: string;
+  image: string;
+}
 const Crew = () => {
-  const [activeTab, setActiveTab] = useState("Moon");
-
-  const handleTabClick = (tab: string) => {
-    setActiveTab(tab);
-  };
-
-  const activeData = data.crew.find(crew => crew.name.toLowerCase() === activeTab.toLowerCase());
-
-  if (!activeData) {
-    return <div>Loading...</div>;
-  }
+  const crew = data.crew;
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="h-screen bg-cover bg-center bg-fixed bg-[url(/assets/crew/background-crew-desktop.jpg)]">
       <Navbar />
@@ -25,20 +22,27 @@ const Crew = () => {
         </h1>
         <div className="flex space-x-8 text-white mt-10 ml-30 mr-30 items-center justify-evenly font-serif">
           <div className="flex flex-col space-y-5 w-1/3 h-full justify-between">
-            <h2 className="text-slate-300 text-2xl">{activeData.role}</h2>
-            <h1 className="text-5xl">{activeData.name}</h1>
-            <p className="text-slate-300">{activeData.bio}</p>
+            <h2 className="text-slate-300 text-2xl">
+              {crew[activeIndex].role}
+            </h2>
+            <h1 className="text-5xl">{crew[activeIndex].name}</h1>
+            <p className="text-slate-300">{crew[activeIndex].bio}</p>
             <div className="flex items-center space-x-4 pt-20">
-              <div className="w-3 h-3 rounded-full bg-slate-500"/>
-              <div className="w-3 h-3 rounded-full bg-slate-500"/>
-              <div className="w-3 h-3 rounded-full bg-slate-500"/>
-              <div className="w-3 h-3 rounded-full bg-slate-500"/>
+              {crew.map((_, index) => (
+                <button
+                  key={index}
+                  className={`h-3 w-3 rounded-full ${
+                    activeIndex === index ? "bg-white" : "bg-gray-500"
+                  }`}
+                  onClick={() => setActiveIndex(index)}
+                />
+              ))}
             </div>
           </div>
           <div>
             <Image
-              src={activeData.images.png}
-              alt="moon-image"
+              src={crew[activeIndex].images.webp}
+              alt={crew[activeIndex].name}
               width={400}
               height={400}
             />

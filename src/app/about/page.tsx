@@ -27,7 +27,7 @@ const About = () => {
           <div>
             <Image
               src={activeData.images.png}
-              alt="moon-image"
+              alt={activeData.name}
               width={400}
               height={400}
             />

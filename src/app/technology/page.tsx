@@ -1,7 +1,21 @@
+"use client"
 import Navbar from "../../../components/Navbar";
 import Image from "next/image";
+import data from "../data/data.json";
+import { useState } from "react";
 
 const Technology = () => {
+  const [activeTab, setActiveTab] = useState("Moon");
+
+  const handleTabClick = (tab: string) => {
+    setActiveTab(tab);
+  };
+
+  const activeData = data.technology.find(tech => tech.name.toLowerCase() === activeTab.toLowerCase());
+
+  if (!activeData) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="h-screen bg-cover bg-center bg-fixed bg-[url(/assets/technology/background-technology-desktop.jpg)]">
       <Navbar />
@@ -23,18 +37,12 @@ const Technology = () => {
           </div>
           <div className="flex flex-col space-y-5 w-1/2 justify-between">
             <p className="text-slate-300">THE TERMINOLOGY...</p>
-            <h1 className="text-4xl">LAUNCH VEHICLE</h1>
-            <p className="text-slate-300">
-              A launch vehicle or carrier rocket is a rocket-propelled vehicle
-              used to carry a payload from Earth's surface to space, usually to
-              Earth orbit or beyond. Our WEB-X carrier rocket is the most
-              powerful in operation. Standing 150 metres tall, it's quite an
-              awe-inspiring sight on the launch pad!
-            </p>
+            <h1 className="text-4xl">{activeData.name}</h1>
+            <p className="text-slate-300">{activeData.description}</p>
           </div>
           <div>
             <Image
-              src="/assets/technology/image-launch-vehicle-portrait.jpg"
+              src={activeData.images.landscape}
               alt="moon-image"
               width={400}
               height={400}
