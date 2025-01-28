@@ -19,7 +19,7 @@ const About = () => {
   return (
     <div className="h-screen bg-cover bg-center bg-fixed  bg-[url(/assets/destination/background-destination-mobile.jpg)] sm:bg-[url(/assets/destination/background-destination-desktop.jpg)]">
       <Navbar />
-      <div className="h-full pt-40">
+      <div className="h-full flex flex-col justify-center items-center pt-40 sm:justify-start sm:items-start">
         <h1 className="text-center text-white text-xl relative top-0 sm:left-40 sm:text-left tracking-wide">
           <span className="mr-5 text-gray-500">01</span>PICK YOUR DESTINATION
         </h1>
@@ -47,13 +47,13 @@ const About = () => {
             <h1 className="text-7xl text-center sm:text-8xl sm:text-left">{activeData.name.toUpperCase()}</h1>
             <p className="text-slate-500 text-center sm:text-left">{activeData.description}</p>
             <hr />
-            <div className="flex flex-col text-center pt-10 sm:pt-0 sm:flex sm:flex-row justify-between">
+            <div className="flex flex-col text-center sm:pt-0 sm:flex sm:flex-row justify-between">
               <div>
                 <p className="text-sm text-slate-500">AVG DISTANCE</p>
                 <h5 className="text-2xl">{activeData.distance}</h5>
               </div>
               <div>
-                <p className="text-sm text-slate-500 pt-10 sm:pt-0">EST. TRAVEL TIME</p>
+                <p className="text-sm text-slate-500 pt-5 sm:pt-0">EST. TRAVEL TIME</p>
                 <h5 className="text-2xl">{activeData.travel}</h5>
               </div>
             </div>
