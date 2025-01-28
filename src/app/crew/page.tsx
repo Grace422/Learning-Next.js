@@ -39,12 +39,13 @@ const Crew = () => {
               ))}
             </div>
           </div>
-          <div>
+          <div className="relative w-96 h-96">
             <Image
-              src={crew[activeIndex].images.webp}
+              src={crew[activeIndex].images.png}
               alt={crew[activeIndex].name}
-              width={400}
-              height={400}
+              layout="fill"
+              objectFit="contain"
+              className="z-0"
             />
           </div>
         </div>
