@@ -20,14 +20,14 @@ const Crew = () => {
         <h1 className="text-center text-white text-xl relative top-0 sm:left-40 sm:text-left tracking-wide">
           <span className="mr-5 text-gray-500">02</span>MEET YOUR CREW
         </h1>
-        <div className="flex flex-col sm:flex sm:flex-row space-x-8 text-white mt-10 ml-30 mr-30 items-center justify-evenly font-serif">
-          <div className="flex flex-col space-y-5 w-1/3 h-full justify-between">
+        <div className="flex flex-col sm:flex sm:flex-row space-x-8 text-white mt-10 sm:ml-30 sm:mr-30 text-center sm:text-left items-center justify-evenly font-serif">
+          <div className="flex flex-col space-y-5 sm:w-1/3 h-full justify-between">
             <h2 className="text-slate-300 text-2xl">
               {crew[activeIndex].role}
             </h2>
             <h1 className="text-5xl">{crew[activeIndex].name}</h1>
             <p className="text-slate-300">{crew[activeIndex].bio}</p>
-            <div className="flex items-center space-x-4 pt-20">
+            <div className="flex items-center space-x-4 pt-20 ml-40 sm:ml-0">
               {crew.map((_, index) => (
                 <button
                   key={index}

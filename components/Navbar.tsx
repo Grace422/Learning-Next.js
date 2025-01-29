@@ -13,6 +13,7 @@ const Navbar = () => {
     setIsOpen(false);
   };
   return (
+    <>
     <div className="absolute w-full top-10 flex justify-between items-center">
       <div>
         <Image
@@ -91,7 +92,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {isOpen && (
+      
+    </div>
+    {isOpen && (
         <div className="bg-slate-900 p-7 absolute w-1/2 h-full top-0 left-0 z-10">
           <ul className="sm:flex space-x-4 pt-10 text-white">
             <Link href="/">
@@ -117,7 +120,7 @@ const Navbar = () => {
           </ul>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
