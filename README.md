@@ -8,11 +8,11 @@ Next.js – React framework for server-side rendering (SSR) and static site gene
 Tailwind CSS – Utility-first CSS framework for fast UI development.
 TypeScript – Enhances JavaScript with static typing.
 
-📷 Preview
-
- ![Sample Output](./public/assets/output.png)
-
 📦 Features
 ✅ Fully responsive design (Mobile and Desktop).
 ✅ Dynamic content switching (e.g., technology tabs, crew selection).
 ✅ Optimized image handling with Next.js <Image> component.
+
+📷 Preview
+
+ ![Sample Output](./public/assets/output.png)
