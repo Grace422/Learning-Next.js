@@ -32,7 +32,7 @@ const About = () => {
               objectFit="contain"
             />
           </div>
-          <div className="flex flex-col space-y-5 sm:w-1/3 h-full justify-between pt-10 sm:pt-0">
+          <div className="flex flex-col space-y-3 sm:w-1/3 h-full justify-between pt-10 sm:pt-0">
             <ul className="destination-links flex space-x-4 text-sm text-slate-500 sm:text-left justify-evenly sm:justify-start">
               {data.destinations.map((dest) => (
                 <li
@@ -46,7 +46,7 @@ const About = () => {
             </ul>
             <h1 className="text-7xl text-center sm:text-8xl sm:text-left">{activeData.name.toUpperCase()}</h1>
             <p className="text-slate-500 text-center sm:text-left">{activeData.description}</p>
-            <hr />
+            <hr className="ml-5 mr-5 sm:ml-0 sm:mr-0"/>
             <div className="flex flex-col text-center sm:pt-0 sm:flex sm:flex-row justify-between">
               <div>
                 <p className="text-sm text-slate-500">AVG DISTANCE</p>
